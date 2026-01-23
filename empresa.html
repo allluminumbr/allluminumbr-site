@@ -1,119 +1,150 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Empresa | All Luminum Br</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Empresa | All Luminum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0f0f0f;
-      color: #ffffff;
-      line-height: 1.6;
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body { background: #0d0d0d; color: #fff; }
+
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+                  url('https://images.unsplash.com/photo-1581090700227-1e37b190418e') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 80px 10%;
     }
 
-    header {
-      padding: 40px 20px;
-      text-align: center;
-      border-bottom: 1px solid #333;
+    .hero-content {
+      max-width: 720px;
     }
 
-    header h1 {
-      font-size: 2.4rem;
-      margin-bottom: 10px;
+    .hero-content h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      font-weight: 700;
     }
 
-    header p {
-      font-size: 1.1rem;
-      opacity: 0.85;
+    .hero-content p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #dcdcdc;
     }
 
     section {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 20px;
+      padding: 80px 10%;
+      background: #111;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
     }
 
     h2 {
-      font-size: 1.8rem;
-      margin-bottom: 16px;
-      color: #e0e0e0;
-    }
-
-    p {
-      font-size: 1.05rem;
-      opacity: 0.9;
+      font-size: 32px;
       margin-bottom: 20px;
     }
 
-    .valores {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .valor {
+    .card {
       background: #1a1a1a;
-      padding: 20px;
-      border-radius: 6px;
-      border: 1px solid #2a2a2a;
+      padding: 30px;
+      border-left: 4px solid #bfbfbf;
     }
 
     footer {
+      background: #0a0a0a;
+      padding: 40px 10%;
       text-align: center;
-      padding: 30px 20px;
-      border-top: 1px solid #333;
-      font-size: 0.9rem;
-      opacity: 0.7;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .socials i {
+      margin: 0 10px;
+      font-size: 20px;
+      color: #fff;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Quem Somos</h1>
-    <p>Conheça a essência, o propósito e a força da All Luminum Br</p>
-  </header>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>All Luminum</h1>
+      <p>
+        Somos uma empresa industrial especializada em soluções em alumínio,
+        atuando com foco em qualidade, precisão técnica e excelência produtiva.
+        Desenvolvemos processos e produtos que atendem às mais altas exigências
+        do mercado nacional e internacional.
+      </p>
+    </div>
+  </div>
 
+  <!-- QUEM SOMOS -->
   <section>
-    <h2>Sobre a All Luminum Br</h2>
+    <h2>Quem Somos</h2>
     <p>
-      A <strong>All Luminum Br</strong> nasce com o propósito de atuar no setor de alumínio industrial
-      com excelência, responsabilidade técnica e visão de longo prazo.
+      A All Luminum nasce com o propósito de elevar o padrão industrial do alumínio,
+      unindo tecnologia, engenharia de processos e compromisso com resultados.
+      Atuamos de forma estratégica, atendendo indústrias, construtoras e projetos
+      especiais que exigem desempenho, durabilidade e acabamento superior.
     </p>
-    <p>
-      Atuamos com foco em soluções industriais, fornecendo produtos e serviços que atendem aos
-      mais altos padrões de qualidade, desempenho e confiabilidade.
-    </p>
+  </section>
 
-    <h2>Missão</h2>
-    <p>
-      Oferecer soluções em alumínio industrial com qualidade, eficiência e compromisso,
-      contribuindo para o desenvolvimento dos nossos clientes e parceiros.
-    </p>
+  <!-- MISSÃO VISÃO VALORES -->
+  <section>
+    <div class="grid">
+      <div class="card">
+        <h3>Missão</h3>
+        <p>
+          Fornecer soluções em alumínio com alto padrão de qualidade,
+          eficiência produtiva e confiabilidade técnica.
+        </p>
+      </div>
 
-    <h2>Visão</h2>
-    <p>
-      Ser reconhecida como uma empresa sólida, inovadora e referência no segmento de alumínio
-      industrial no Brasil e no exterior.
-    </p>
+      <div class="card">
+        <h3>Visão</h3>
+        <p>
+          Ser referência nacional no setor de alumínio industrial,
+          reconhecida pela excelência, inovação e relacionamento com o mercado.
+        </p>
+      </div>
 
-    <h2>Valores</h2>
-    <div class="valores">
-      <div class="valor">✔ Qualidade em cada processo</div>
-      <div class="valor">✔ Compromisso com prazos e resultados</div>
-      <div class="valor">✔ Ética e transparência</div>
-      <div class="valor">✔ Inovação contínua</div>
-      <div class="valor">✔ Responsabilidade e confiança</div>
+      <div class="card">
+        <h3>Valores</h3>
+        <p>
+          Qualidade • Compromisso • Ética • Inovação • Responsabilidade Industrial
+        </p>
+      </div>
     </div>
   </section>
 
+  <!-- RODAPÉ -->
   <footer>
-    © All Luminum Br — São Carlos • SP • Brasil
+    <p>📍 São Carlos, SP, Brasil</p>
+    <p>📧 vendas@allluminumbr.com | ☎️ (16) 99785-7531</p>
+
+    <div class="socials">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <p style="margin-top:20px;">© All Luminum — Todos os direitos reservados</p>
   </footer>
 
 </body>
