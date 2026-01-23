@@ -9,6 +9,123 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
+    /* HEADER FIXO */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 10%;
+}
+
+/* LOGO */
+.logo a {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* MENU */
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #ffffff;
+}
+
+/* BOTÃO CONTATO */
+.btn-contato {
+  padding: 10px 18px;
+  border: 1px solid #cfcfcf;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn-contato:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* SOCIAL */
+.social-header a {
+  margin-left: 12px;
+  color: #ffffff;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.social-header a:hover {
+  opacity: 0.7;
+}
+
+/* MOBILE */
+.menu-toggle {
+  display: none;
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .nav {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    background: #0d0d0d;
+    width: 100%;
+    height: calc(100vh - 70px);
+    transition: 0.3s;
+    padding-top: 40px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .social-header {
+    display: none;
+  }
+}
+
+/* ESPAÇO PARA O HEADER FIXO */
+body {
+  padding-top: 80px;
+}
+
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
     body { background: #0e0e0e; color: #fff; }
 
@@ -102,6 +219,15 @@
     <p>Instagram, Facebook, LinkedIn e YouTube: @allluminumbr</p>
   </footer>
 
+  <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
+  
 </body>
   <header class="header">
   <div class="container-header">
