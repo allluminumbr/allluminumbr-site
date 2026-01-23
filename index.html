@@ -8,39 +8,64 @@
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
       font-family: "Segoe UI", Arial, Helvetica, sans-serif;
       color: #ffffff;
-      min-height: 100vh;
-      background-image: url("https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc");
+      background-image: url("https://images.unsplash.com/photo-1603201667141-5323cf4a76d7");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      min-height: 100vh;
     }
 
-    /* Camada escura para contraste */
     .overlay {
+      background: rgba(0, 0, 0, 0.78);
       min-height: 100vh;
-      background: rgba(0, 0, 0, 0.75);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER */
+    header {
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
+      justify-content: space-between;
+      padding: 24px 40px;
     }
 
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    /* CONTEÚDO */
     .container {
       max-width: 900px;
+      margin: auto;
       text-align: center;
+      padding: 40px 20px;
     }
 
     h1 {
       font-size: 3rem;
       letter-spacing: 2px;
-      margin-bottom: 10px;
       text-transform: uppercase;
+      margin-bottom: 12px;
     }
 
     h2 {
@@ -50,54 +75,62 @@
       opacity: 0.9;
     }
 
-    p {
-      font-size: 1.05rem;
-      line-height: 1.7;
-      opacity: 0.9;
-      margin-bottom: 18px;
-    }
-
     .divider {
-      width: 80px;
+      width: 90px;
       height: 3px;
       background: #cfcfcf;
       margin: 30px auto;
       opacity: 0.6;
     }
 
+    p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 18px;
+      opacity: 0.9;
+    }
+
     .section-title {
       margin-top: 30px;
-      font-weight: bold;
       font-size: 1.1rem;
+      font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 1px;
-      opacity: 1;
     }
 
     .contact {
       margin-top: 16px;
-      font-size: 1rem;
       line-height: 1.8;
     }
 
     .socials {
       margin-top: 20px;
       font-size: 0.95rem;
-      opacity: 0.9;
     }
 
     .socials span {
       display: inline-block;
-      margin: 6px 12px;
+      margin: 6px 14px;
+      opacity: 0.9;
     }
 
-    .footer {
-      margin-top: 40px;
+    footer {
+      text-align: center;
+      padding: 20px;
       font-size: 0.85rem;
-      opacity: 0.7;
+      opacity: 0.6;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      nav {
+        text-align: center;
+      }
+
       h1 {
         font-size: 2.2rem;
       }
@@ -107,8 +140,22 @@
 
 <body>
   <div class="overlay">
-    <div class="container">
 
+    <!-- HEADER -->
+    <header>
+      <!-- 🔴 COLE AQUI O LINK DA LOGO -->
+      <img src="COLE_AQUI_O_LINK_DA_LOGO.png" alt="All Luminum Br" />
+
+      <nav>
+        <a href="#">Início</a>
+        <a href="#">Empresa</a>
+        <a href="#">Atuação</a>
+        <a href="#">Contato</a>
+      </nav>
+    </header>
+
+    <!-- CONTEÚDO -->
+    <main class="container">
       <h1>All Luminum Br</h1>
       <h2>Soluções em alumínio para aplicações industriais e construtivas</h2>
 
@@ -146,17 +193,17 @@
 
       <p class="section-title">Redes sociais</p>
       <div class="socials">
-        <span>📸 Instagram — @allluminumbr</span>
-        <span>📘 Facebook — @allluminumbr</span>
-        <span>💼 LinkedIn — All Luminum Br</span>
-        <span>▶️ YouTube — All Luminum Br</span>
+        <span>Instagram — @allluminumbr</span>
+        <span>Facebook — @allluminumbr</span>
+        <span>LinkedIn — All Luminum Br</span>
+        <span>YouTube — All Luminum Br</span>
       </div>
+    </main>
 
-      <div class="footer">
-        © 2026 All Luminum Br — Todos os direitos reservados.
-      </div>
+    <footer>
+      © 2026 All Luminum Br — Todos os direitos reservados.
+    </footer>
 
-    </div>
   </div>
 </body>
 </html>
