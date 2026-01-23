@@ -6,117 +6,157 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0f0f0f;
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
       color: #ffffff;
+      min-height: 100vh;
+      background-image: url("https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* Camada escura para contraste */
+    .overlay {
+      min-height: 100vh;
+      background: rgba(0, 0, 0, 0.75);
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 720px;
       padding: 40px 20px;
     }
 
+    .container {
+      max-width: 900px;
+      text-align: center;
+    }
+
     h1 {
-      font-size: 2.6rem;
-      margin-bottom: 12px;
-      letter-spacing: 1px;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
     }
 
     h2 {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: normal;
+      margin-bottom: 30px;
       opacity: 0.9;
-      margin-bottom: 28px;
     }
 
     p {
       font-size: 1.05rem;
-      line-height: 1.6;
+      line-height: 1.7;
       opacity: 0.9;
       margin-bottom: 18px;
     }
 
+    .divider {
+      width: 80px;
+      height: 3px;
+      background: #cfcfcf;
+      margin: 30px auto;
+      opacity: 0.6;
+    }
+
     .section-title {
-      margin-top: 28px;
+      margin-top: 30px;
       font-weight: bold;
       font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
       opacity: 1;
     }
 
-    .socials {
+    .contact {
       margin-top: 16px;
       font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .socials {
+      margin-top: 20px;
+      font-size: 0.95rem;
+      opacity: 0.9;
     }
 
     .socials span {
       display: inline-block;
-      margin: 6px 10px;
-      opacity: 0.9;
+      margin: 6px 12px;
     }
 
     .footer {
-      margin-top: 32px;
-      font-size: 0.95rem;
-      opacity: 0.85;
+      margin-top: 40px;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <div class="overlay">
+    <div class="container">
 
-    <h1>All Luminum Br</h1>
-    <h2>Soluções em alumínio para aplicações industriais e construtivas</h2>
+      <h1>All Luminum Br</h1>
+      <h2>Soluções em alumínio para aplicações industriais e construtivas</h2>
 
-    <p>
-      A All Luminum Br atua no desenvolvimento e fornecimento de soluções em alumínio,
-      atendendo demandas industriais, técnicas e estruturais com foco em qualidade,
-      precisão e confiabilidade.
-    </p>
+      <div class="divider"></div>
 
-    <p>
-      Nossa operação é orientada por processos, padrões técnicos e visão de longo prazo,
-      acompanhando a evolução do mercado e as necessidades de cada projeto.
-    </p>
+      <p>
+        A All Luminum Br atua no desenvolvimento e fornecimento de soluções em alumínio,
+        atendendo demandas industriais, técnicas e estruturais com foco em qualidade,
+        precisão e confiabilidade.
+      </p>
 
-    <p class="section-title">Atuação</p>
-    <p>
-      • Perfis e soluções em alumínio<br>
-      • Aplicações industriais e técnicas<br>
-      • Projetos sob demanda
-    </p>
+      <p>
+        Nossa operação é orientada por processos, padrões técnicos e visão de longo prazo,
+        acompanhando a evolução do mercado e as necessidades de cada projeto.
+      </p>
 
-    <p class="section-title">Status</p>
-    <p>
-      Empresa ativa, em fase de estruturação e expansão operacional.
-    </p>
+      <p class="section-title">Atuação</p>
+      <p>
+        Perfis e soluções em alumínio<br>
+        Aplicações industriais e técnicas<br>
+        Projetos sob demanda
+      </p>
 
-    <p class="section-title">Contato</p>
-    <p>
-      📞 (16) 99785-7531<br>
-      ✉️ vendas@allluminumbr.br<br>
-      📍 São Carlos – SP – Brasil
-    </p>
+      <p class="section-title">Status</p>
+      <p>
+        Empresa ativa, em fase de estruturação e expansão operacional.
+      </p>
 
-    <p class="section-title">Redes sociais</p>
-    <div class="socials">
-      <span>📸 Instagram — @allluminumbr</span>
-      <span>📘 Facebook — @allluminumbr</span>
-      <span>💼 LinkedIn — All Luminum Br</span>
-      <span>▶️ YouTube — All Luminum Br</span>
+      <p class="section-title">Contato</p>
+      <div class="contact">
+        📞 (16) 99785-7531<br>
+        ✉️ vendas@allluminumbr.br<br>
+        📍 São Carlos – SP – Brasil
+      </div>
+
+      <p class="section-title">Redes sociais</p>
+      <div class="socials">
+        <span>📸 Instagram — @allluminumbr</span>
+        <span>📘 Facebook — @allluminumbr</span>
+        <span>💼 LinkedIn — All Luminum Br</span>
+        <span>▶️ YouTube — All Luminum Br</span>
+      </div>
+
+      <div class="footer">
+        © 2026 All Luminum Br — Todos os direitos reservados.
+      </div>
+
     </div>
-
-    <div class="footer">
-      © 2026 All Luminum Br — Todos os direitos reservados.
-    </div>
-
   </div>
 </body>
 </html>
