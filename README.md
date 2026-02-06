@@ -14,6 +14,12 @@ credibilidade digital e base para expansão futura.
 - `empresa.html` — Quem somos
 - `atuacao.html` — Atuação e soluções
 
+## 🧭 Navegação
+- Início → `index.html`
+- Empresa → `empresa.html`
+- Atuação → `atuacao.html`
+- Contato → Seção `#contato` dentro do `index.html`
+
 ## 🚀 Status do Projeto
 Projeto ativo — versão institucional inicial em produção.
 
