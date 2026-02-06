@@ -1,22 +1,23 @@
-# All Luminum Br – Site Institucional
+# All Luminum Br — Site Institucional
 
-Site institucional estático da empresa **All Luminum Br**, desenvolvido para apresentação institucional,
-credibilidade digital e expansão futura.
+Site institucional estático da **All Luminum Br**, desenvolvido para apresentação da empresa,
+credibilidade digital e base para expansão futura.
 
-## 📌 Tecnologias
+## 📌 Tecnologias Utilizadas
 - HTML5
-- CSS puro
+- CSS3 (puro)
 - Hospedagem via Vercel
-- Repositório GitHub
+- Controle de versão com GitHub
 
-## 📍 Estrutura
-- index.html → Página principal
-- empresa.html → Quem somos
-- atuacao.html → Atuação e soluções
+## 📂 Estrutura do Projeto
+- `index.html` — Página principal
+- `empresa.html` — Quem somos
+- `atuacao.html` — Atuação e soluções
 
-## 🚀 Status
-Projeto ativo – versão institucional inicial.
+## 🚀 Status do Projeto
+Projeto ativo — versão institucional inicial em produção.
 
 ## 📞 Contato
-vendas@allluminumbr.com  
-São Carlos – SP – Brasil
+📧 vendas@allluminumbr.com  
+📞 (16) 99785-7531  
+📍 São Carlos – SP – Brasil
