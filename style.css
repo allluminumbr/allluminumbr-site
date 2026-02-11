@@ -44,18 +44,26 @@ body {
 .social-icons {
   display: flex;
   align-items: center;
-  gap: 6px; /* ícones mais próximos */
+  gap: 4px; /* bem próximos */
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-icons img {
-  width: 28px;   /* tamanho maior (antes era menor) */
-  height: 28px;
-  transition: 0.3s ease;
+  width: 34px;       /* maior */
+  height: auto;      /* mantém proporção correta */
+  max-height: 34px;  /* evita distorção */
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .social-icons img:hover {
   transform: scale(1.1);
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .hero {
