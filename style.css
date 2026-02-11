@@ -12,27 +12,29 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER FIXO */
+/* ================= HEADER FIXO ================= */
+
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(15, 15, 16, 0.95);
+  background: rgba(10,10,12,0.95);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
   z-index: 1000;
 }
 
 .header-container {
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1400px;
   margin: auto;
-  padding: 18px 30px;
+  padding: 20px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* LOGO */
+/* LOGO ESQUERDA */
 .logo {
   font-size: 20px;
   font-weight: 700;
@@ -40,10 +42,11 @@ header {
   color: #ffffff;
 }
 
-/* MENU HORIZONTAL */
+/* MENU DIREITA */
 nav ul {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 40px;
 }
 
@@ -58,42 +61,55 @@ nav ul li a:hover {
   color: #ffffff;
 }
 
-/* ESPAÇO PARA HEADER FIXO */
+/* COMPENSAR HEADER FIXO */
 main {
-  padding-top: 110px;
+  padding-top: 100px;
 }
 
-/* HERO COM IMAGEM */
+/* ================= HERO FULL WIDTH ================= */
+
 .hero {
-  min-height: 90vh;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 80px 30px;
-  background: 
-    linear-gradient(rgba(15,15,16,0.85), rgba(15,15,16,0.85)),
-    url('assets/imagens/foto5-allluminumbr.jpg') center/cover no-repeat;
+  padding: 0 80px;
+  background-image: url("assets/imagens/foto5-allluminumbr.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
 }
 
 .hero-content {
+  position: relative;
   max-width: 700px;
+  z-index: 2;
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 48px;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
 .hero p {
   font-size: 18px;
-  color: #d0d0d0;
+  color: #e0e0e0;
 }
 
-/* SEÇÕES INTERNAS */
+/* ================= SEÇÕES INTERNAS ================= */
+
 .section {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 100px auto;
-  padding: 0 30px;
+  padding: 0 40px;
 }
 
 .section h2 {
@@ -106,20 +122,19 @@ main {
   color: #c8c8c8;
 }
 
-/* RODAPÉ */
+/* ================= RODAPÉ HORIZONTAL ================= */
+
 footer {
-  background: #111;
-  padding: 40px 30px;
+  background: #0a0a0c;
+  padding: 25px 20px;
   text-align: center;
   border-top: 1px solid rgba(255,255,255,0.05);
+  font-size: 14px;
+  color: #bdbdbd;
 }
 
-footer p {
-  color: #999;
-  margin-bottom: 8px;
-}
+/* ================= RESPONSIVO ================= */
 
-/* RESPONSIVO */
 @media (max-width: 900px) {
 
   .header-container {
@@ -131,8 +146,12 @@ footer p {
     gap: 20px;
   }
 
+  .hero {
+    padding: 0 30px;
+  }
+
   .hero h1 {
-    font-size: 32px;
+    font-size: 34px;
   }
 
 }
