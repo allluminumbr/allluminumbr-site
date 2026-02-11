@@ -1,170 +1,178 @@
-/* =========================
+/* ===============================
    RESET BÁSICO
-========================= */
+================================= */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* =========================
-   VARIÁVEIS DE IDENTIDADE
-========================= */
-:root {
-  --preto: #0f0f0f;
-  --cinza-escuro: #1a1a1a;
-  --cinza-medio: #2a2a2a;
-  --cinza-claro: #e5e5e5;
-  --branco: #ffffff;
-
-  --fonte-principal: Arial, Helvetica, sans-serif;
-}
-
-/* =========================
-   BODY
-========================= */
 body {
-  font-family: var(--fonte-principal);
-  background-color: var(--preto);
-  color: var(--cinza-claro);
-  line-height: 1.6;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #0e0e0e;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* ===============================
+   HEADER FIXO
+================================= */
 header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
-  background-color: var(--cinza-escuro);
-  border-bottom: 1px solid var(--cinza-medio);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
 }
 
-header .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 16px 24px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* LOGO */
-header .logo {
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: var(--branco);
-  text-transform: uppercase;
-}
-
-/* MENU */
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 24px;
+header img {
+    height: 45px;
 }
 
 nav a {
-  text-decoration: none;
-  color: var(--cinza-claro);
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
 }
 
 nav a:hover {
-  color: var(--branco);
+    color: #b5b5b5;
 }
 
-/* =========================
-   MAIN
-========================= */
+/* ===============================
+   HERO COM IMAGEM INDUSTRIAL
+================================= */
+.hero {
+    height: 100vh;
+    background: 
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url("assets/images/foto5-allluminumbr.jpg") center center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 20px;
+    max-width: 800px;
+    color: #d1d1d1;
+}
+
+/* ===============================
+   CONTEÚDO INTERNO
+================================= */
 main {
-  max-width: 1100px;
-  margin: 80px auto;
-  padding: 0 24px;
+    padding: 120px 10% 80px 10%;
 }
 
-/* =========================
-   SEÇÕES
-========================= */
 section {
-  margin-bottom: 64px;
+    margin-bottom: 80px;
 }
 
-section h1 {
-  font-size: 32px;
-  color: var(--branco);
-  margin-bottom: 24px;
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    border-left: 4px solid #888;
+    padding-left: 15px;
 }
 
-section h2 {
-  font-size: 22px;
-  color: var(--branco);
-  margin-bottom: 16px;
+p {
+    margin-bottom: 20px;
+    color: #dcdcdc;
 }
 
-section p {
-  max-width: 800px;
-  margin-bottom: 16px;
-  font-size: 15px;
-}
-
-/* LISTAS */
 ul {
-  margin-top: 16px;
-  padding-left: 20px;
+    margin-top: 15px;
+    padding-left: 20px;
 }
 
 li {
-  margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* ===============================
+   BOTÃO INSTITUCIONAL
+================================= */
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 28px;
+    background: #ffffff;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #cccccc;
+}
+
+/* ===============================
+   RODAPÉ
+================================= */
 footer {
-  background-color: var(--cinza-escuro);
-  border-top: 1px solid var(--cinza-medio);
-  padding: 32px 24px;
-  text-align: center;
+    background: #000;
+    padding: 50px 10%;
+    border-top: 1px solid #222;
 }
 
-footer p {
-  font-size: 14px;
-  margin-bottom: 8px;
-  color: var(--cinza-claro);
+footer h3 {
+    margin-bottom: 15px;
 }
 
-/* =========================
+footer p,
+footer a {
+    color: #cfcfcf;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* ===============================
    RESPONSIVO
-========================= */
+================================= */
 @media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
 
-  header .container {
-    flex-direction: column;
-    gap: 16px;
-  }
+    nav a {
+        margin-left: 15px;
+        font-size: 14px;
+    }
 
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
+    .hero h1 {
+        font-size: 32px;
+    }
 
-  main {
-    margin: 48px auto;
-  }
+    .hero p {
+        font-size: 16px;
+    }
 
-  section h1 {
-    font-size: 26px;
-  }
-
-  section h2 {
-    font-size: 20px;
-  }
+    main {
+        padding: 100px 7% 60px 7%;
+    }
 }
