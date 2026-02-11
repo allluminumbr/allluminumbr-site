@@ -44,26 +44,20 @@ body {
 .social-icons {
   display: flex;
   align-items: center;
-  gap: -14px; /* bem próximos */
+  gap: 0px;
 }
 
 .social-icons a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
 }
 
 .social-icons img {
-  width: 50px;       /* maior */
-  height: auto;      /* mantém proporção correta */
-  max-height: 50px;  /* evita distorção */
-  object-fit: contain;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.social-icons img:hover {
-  transform: scale(1.1);
-  opacity: 0.85;
+  width: 50px;
+  height: auto;
+  display: block;
 }
 
 .hero {
@@ -129,4 +123,41 @@ footer a {
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .logo {
+    align-self: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .social-icons {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+  }
+
+  nav {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: nowrap;
+  }
+
+  nav ul li a {
+    font-size: 13px;
+  }
+
 }
