@@ -1,178 +1,138 @@
-/* ===============================
-   RESET BÁSICO
-================================= */
+/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background-color: #0e0e0e;
-    color: #ffffff;
-    line-height: 1.6;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #0f0f10;
+  color: #f5f5f5;
+  line-height: 1.6;
 }
 
-/* ===============================
-   HEADER FIXO
-================================= */
+/* HEADER FIXO */
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(6px);
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-    border-bottom: 1px solid #222;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(15, 15, 16, 0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 1000;
 }
 
-header img {
-    height: 45px;
+.header-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    transition: 0.3s;
+/* LOGO */
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ffffff;
 }
 
-nav a:hover {
-    color: #b5b5b5;
+/* MENU HORIZONTAL */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
 }
 
-/* ===============================
-   HERO COM IMAGEM INDUSTRIAL
-================================= */
+nav ul li a {
+  text-decoration: none;
+  color: #cfcfcf;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+/* ESPAÇO PARA HEADER FIXO */
+main {
+  padding-top: 110px;
+}
+
+/* HERO COM IMAGEM */
 .hero {
-    height: 100vh;
-    background: 
-        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-        url("assets/images/foto5-allluminumbr.jpg") center center / cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 30px;
+  background: 
+    linear-gradient(rgba(15,15,16,0.85), rgba(15,15,16,0.85)),
+    url('assets/imagens/foto5-allluminumbr.jpg') center/cover no-repeat;
+}
+
+.hero-content {
+  max-width: 700px;
 }
 
 .hero h1 {
-    font-size: 48px;
-    font-weight: 700;
-    letter-spacing: 1px;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .hero p {
-    margin-top: 20px;
-    font-size: 20px;
-    max-width: 800px;
-    color: #d1d1d1;
+  font-size: 18px;
+  color: #d0d0d0;
 }
 
-/* ===============================
-   CONTEÚDO INTERNO
-================================= */
-main {
-    padding: 120px 10% 80px 10%;
+/* SEÇÕES INTERNAS */
+.section {
+  max-width: 1100px;
+  margin: 100px auto;
+  padding: 0 30px;
 }
 
-section {
-    margin-bottom: 80px;
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
-h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    border-left: 4px solid #888;
-    padding-left: 15px;
+.section p {
+  margin-bottom: 15px;
+  color: #c8c8c8;
 }
 
-p {
-    margin-bottom: 20px;
-    color: #dcdcdc;
-}
-
-ul {
-    margin-top: 15px;
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-/* ===============================
-   BOTÃO INSTITUCIONAL
-================================= */
-.btn {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 12px 28px;
-    background: #ffffff;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 3px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #cccccc;
-}
-
-/* ===============================
-   RODAPÉ
-================================= */
+/* RODAPÉ */
 footer {
-    background: #000;
-    padding: 50px 10%;
-    border-top: 1px solid #222;
+  background: #111;
+  padding: 40px 30px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
 
-footer h3 {
-    margin-bottom: 15px;
+footer p {
+  color: #999;
+  margin-bottom: 8px;
 }
 
-footer p,
-footer a {
-    color: #cfcfcf;
-    font-size: 14px;
-    text-decoration: none;
-}
+/* RESPONSIVO */
+@media (max-width: 900px) {
 
-footer a:hover {
-    color: #ffffff;
-}
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-/* ===============================
-   RESPONSIVO
-================================= */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 20px;
-    }
+  nav ul {
+    gap: 20px;
+  }
 
-    nav a {
-        margin-left: 15px;
-        font-size: 14px;
-    }
+  .hero h1 {
+    font-size: 32px;
+  }
 
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    main {
-        padding: 100px 7% 60px 7%;
-    }
 }
