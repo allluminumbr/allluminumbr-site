@@ -11,6 +11,9 @@ body {
   background-color: #0f0f0f;
   color: #ffffff;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* CONTAINER */
@@ -40,7 +43,7 @@ header {
 
 /* LOGO */
 .logo img {
-  height: 45px;        /* TAMANHO CONTROLADO */
+  height: 45px;
   width: auto;
   display: block;
 }
@@ -63,15 +66,17 @@ nav a:hover {
   color: #c7a23f;
 }
 
-/* HERO */
+/* HERO BASE */
 .hero {
   height: 100vh;
-  background: url('assets/imagens/foto5-allluminumbr.jpg') center center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 120px 20px 40px 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-content {
@@ -81,17 +86,26 @@ nav a:hover {
   max-width: 800px;
 }
 
-.hero h1 {
-  font-size: 38px;
-  margin-bottom: 20px;
+/* IMAGENS ESPECÍFICAS POR PÁGINA */
+.hero-home {
+  background-image: url('assets/imagens/foto1.jpg');
 }
 
-.hero p {
-  font-size: 18px;
+.hero-empresa {
+  background-image: url('assets/imagens/foto2.jpg');
 }
 
-/* PAGE CONTENT */
+.hero-atuacao {
+  background-image: url('assets/imagens/foto3.jpg');
+}
+
+.hero-processos {
+  background-image: url('assets/imagens/foto4.jpg');
+}
+
+/* PÁGINAS INTERNAS */
 .page {
+  flex: 1;
   padding: 140px 0 80px 0;
 }
 
@@ -100,24 +114,16 @@ nav a:hover {
   font-size: 32px;
 }
 
-.page ul {
-  margin-top: 20px;
-  padding-left: 20px;
-}
-
-.page li {
-  margin-bottom: 10px;
-}
-
-/* FOOTER */
+/* FOOTER FIXO NO FINAL */
 footer {
   background: #000000;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   font-size: 14px;
   border-top: 1px solid #222;
 }
 
+/* LINKS FOOTER */
 footer a {
   color: #c7a23f;
   text-decoration: none;
@@ -127,7 +133,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -139,9 +145,26 @@ footer a:hover {
   text-decoration: none;
   font-weight: bold;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  transition: 0.3s;
 }
 
-.whatsapp-float:hover {
-  background: #1ebe5d;
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+  nav {
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
 }
