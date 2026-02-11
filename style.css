@@ -1,145 +1,144 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* BASE */
 body {
-  background-color: #0d0f12;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0f0f0f;
   color: #ffffff;
-  padding-bottom: 80px;
+  line-height: 1.6;
 }
 
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
 header {
   position: fixed;
-  top: 0;
   width: 100%;
-  background: rgba(10,10,12,0.95);
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(6px);
   z-index: 1000;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding: 15px 0;
 }
 
 .header-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 18px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo {
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 1px;
+/* LOGO */
+.logo img {
+  height: 45px;        /* TAMANHO CONTROLADO */
+  width: auto;
+  display: block;
 }
 
-nav ul {
-  list-style: none;
+/* MENU */
+nav {
   display: flex;
   gap: 30px;
 }
 
-nav ul li a {
-  text-decoration: none;
+nav a {
   color: #ffffff;
+  text-decoration: none;
   font-weight: 500;
+  font-size: 15px;
   transition: 0.3s;
 }
 
-nav ul li a:hover {
-  color: #c0c0c0;
+nav a:hover {
+  color: #c7a23f;
 }
 
+/* HERO */
 .hero {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  background: url('assets/imagens/foto5-allluminumbr.jpg') center center/cover no-repeat;
   display: flex;
   align-items: center;
-  padding: 0 80px;
-  background-image: url("assets/imagens/foto5-allluminumbr.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.65);
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px 40px 20px;
 }
 
 .hero-content {
-  position: relative;
-  max-width: 700px;
-  z-index: 2;
+  background: rgba(0,0,0,0.65);
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 800px;
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 38px;
   margin-bottom: 20px;
 }
 
 .hero p {
   font-size: 18px;
-  line-height: 1.6;
-  color: #e0e0e0;
 }
 
-.section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 140px 40px 80px 40px;
+/* PAGE CONTENT */
+.page {
+  padding: 140px 0 80px 0;
 }
 
-.section h2 {
+.page h1 {
+  margin-bottom: 20px;
   font-size: 32px;
-  margin-bottom: 20px;
 }
 
-.section p {
-  line-height: 1.8;
-  color: #d0d0d0;
-  margin-bottom: 20px;
+.page ul {
+  margin-top: 20px;
+  padding-left: 20px;
 }
 
+.page li {
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #0a0a0c;
-  padding: 18px;
+  background: #000000;
   text-align: center;
+  padding: 20px;
   font-size: 14px;
-  color: #bdbdbd;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  border-top: 1px solid #222;
 }
 
 footer a {
-  color: #ffffff;
+  color: #c7a23f;
   text-decoration: none;
-  margin: 0 5px;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
 
+/* WHATSAPP FLOAT */
 .whatsapp-float {
   position: fixed;
-  bottom: 90px;
-  right: 25px;
+  bottom: 20px;
+  right: 20px;
   background: #25D366;
   color: #fff;
   padding: 12px 18px;
-  border-radius: 40px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
   transition: 0.3s;
 }
 
