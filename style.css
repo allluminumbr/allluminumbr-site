@@ -88,20 +88,21 @@ nav a:hover {
 
 /* IMAGENS ESPECÍFICAS POR PÁGINA */
 .hero-home {
-  background-image: url('assets/imagens/foto1.jpg');
+  background: url("assets/images/foto1.jpg.png") center/cover no-repeat;
 }
 
 .hero-empresa {
-  background-image: url('assets/imagens/foto2.jpg');
+  background: url("assets/images/foto2.jpg.png") center/cover no-repeat;
 }
 
 .hero-atuacao {
-  background-image: url('assets/imagens/foto3.jpg');
+  background: url("assets/images/foto3.jpg.png") center/cover no-repeat;
 }
 
 .hero-processos {
-  background-image: url('assets/imagens/foto4.jpg');
+  background: url("assets/images/foto4.jpg.png") center/cover no-repeat;
 }
+
 
 /* PÁGINAS INTERNAS */
 .page {
