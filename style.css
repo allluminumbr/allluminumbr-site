@@ -44,13 +44,13 @@ body {
 .social-icons {
   display: flex;
   align-items: center;
-  gap: -12px; /* força aproximação */
+  gap: 2px; /* espaço mínimo real */
 }
 
 .social-icons a {
   display: inline-flex;
+  margin: 0;
   padding: 0;
-  margin: 0 -6px; /* remove espaço invisível lateral */
   line-height: 0;
 }
 
@@ -127,11 +127,13 @@ footer a {
 
 @media (max-width: 768px) {
 
-  header {
-    display: flex;
+  .site-header {
+    padding: 12px 15px;
+  }
+
+  .header-container {
     flex-direction: column;
     align-items: center;
-    padding: 12px 18px;
   }
 
   .logo {
@@ -139,32 +141,28 @@ footer a {
     margin-bottom: 10px;
   }
 
-  .social-icons {
-    position: static;
-    margin-bottom: 10px;
-    gap: 0px;
+  .logo img {
+    height: 40px;
   }
 
-  .social-icons a {
-    margin: 0 -1px;
+  .social-icons {
+    gap: 2px;
+    margin-bottom: 10px;
   }
 
   .social-icons img {
-    width: 42px;
+    width: 40px;
   }
 
-  nav {
-    width: 100%;
-  }
-
-  nav ul {
+  .main-nav ul {
     display: flex;
+    flex-direction: row; /* força horizontal */
     justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap; /* permite quebrar linha */
+    gap: 15px;
+    flex-wrap: nowrap; /* NÃO quebra linha */
   }
 
-  nav ul li a {
+  .main-nav a {
     font-size: 12px;
   }
 
