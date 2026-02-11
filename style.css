@@ -1,18 +1,15 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background-color: #0f0f10;
-  color: #f5f5f5;
-  line-height: 1.6;
+  background-color: #0d0f12;
+  color: #ffffff;
+  padding-bottom: 80px;
 }
-
-/* ================= HEADER FIXO ================= */
 
 header {
   position: fixed;
@@ -20,55 +17,44 @@ header {
   width: 100%;
   background: rgba(10,10,12,0.95);
   backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
   z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .header-container {
-  width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
-  padding: 20px 40px;
+  padding: 18px 40px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
-/* LOGO ESQUERDA */
 .logo {
   font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-/* MENU DIREITA */
 nav ul {
   list-style: none;
   display: flex;
-  align-items: center;
-  gap: 40px;
+  gap: 30px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #cfcfcf;
+  color: #ffffff;
   font-weight: 500;
   transition: 0.3s;
 }
 
 nav ul li a:hover {
-  color: #ffffff;
+  color: #c0c0c0;
 }
-
-/* COMPENSAR HEADER FIXO */
-main {
-  padding-top: 100px;
-}
-
-/* ================= HERO FULL WIDTH ================= */
 
 .hero {
+  position: relative;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -94,22 +80,20 @@ main {
 }
 
 .hero h1 {
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 42px;
   margin-bottom: 20px;
 }
 
 .hero p {
   font-size: 18px;
+  line-height: 1.6;
   color: #e0e0e0;
 }
 
-/* ================= SEÇÕES INTERNAS ================= */
-
 .section {
-  max-width: 1200px;
-  margin: 100px auto;
-  padding: 0 40px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 140px 40px 80px 40px;
 }
 
 .section h2 {
@@ -118,40 +102,47 @@ main {
 }
 
 .section p {
-  margin-bottom: 15px;
-  color: #c8c8c8;
+  line-height: 1.8;
+  color: #d0d0d0;
+  margin-bottom: 20px;
 }
-
-/* ================= RODAPÉ HORIZONTAL ================= */
 
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   background: #0a0a0c;
-  padding: 25px 20px;
+  padding: 18px;
   text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.05);
   font-size: 14px;
   color: #bdbdbd;
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
 
-/* ================= RESPONSIVO ================= */
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 5px;
+}
 
-@media (max-width: 900px) {
+footer a:hover {
+  text-decoration: underline;
+}
 
-  .header-container {
-    flex-direction: column;
-    gap: 15px;
-  }
+.whatsapp-float {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  background: #25D366;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
 
-  nav ul {
-    gap: 20px;
-  }
-
-  .hero {
-    padding: 0 30px;
-  }
-
-  .hero h1 {
-    font-size: 34px;
-  }
-
+.whatsapp-float:hover {
+  background: #1ebe5d;
 }
