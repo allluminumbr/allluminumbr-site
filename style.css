@@ -23,7 +23,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(10, 14, 18, 0.95);
+  background: rgba(10, 14, 18, 0.97);
   padding: 15px 60px;
   display: flex;
   justify-content: space-between;
@@ -32,15 +32,43 @@ header {
 }
 
 .logo img {
-  height: 55px;
+  height: 50px;
   width: auto;
   display: block;
 }
 
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+/* REDES SOCIAIS */
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+}
+
+.social-links a {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  opacity: 1;
+}
+
+/* MENU */
+
 nav ul {
   list-style: none;
   display: flex;
-  gap: 35px;
+  gap: 30px;
 }
 
 nav a {
@@ -65,14 +93,14 @@ nav a:hover {
   justify-content: center;
   text-align: center;
   padding: 0 20px;
-  margin-top: 90px;
+  margin-top: 100px;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.78);
 }
 
 .hero-content {
@@ -82,7 +110,7 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 46px;
   margin-bottom: 20px;
 }
 
@@ -109,24 +137,20 @@ nav a:hover {
   background: url("assets/images/foto4.jpg.png") center/cover no-repeat;
 }
 
-/* ================= RODAPÉ FIXO ================= */
+/* ================= RODAPÉ ================= */
 
 footer {
   background: #0a0e12;
-  padding: 18px;
+  padding: 12px;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   margin-top: auto;
 }
 
 footer a {
   color: #ffffff;
   text-decoration: none;
-  margin: 0 8px;
-}
-
-footer a:hover {
-  color: #b5b5b5;
+  margin: 0 6px;
 }
 
 /* ================= WHATSAPP ================= */
@@ -137,29 +161,39 @@ footer a:hover {
   right: 25px;
   background: #25D366;
   color: #ffffff;
-  padding: 15px 20px;
+  padding: 14px 18px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
   z-index: 999;
 }
 
 /* ================= RESPONSIVO ================= */
 
 @media (max-width: 900px) {
+
   header {
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
     padding: 20px;
   }
 
+  .header-right {
+    align-items: center;
+  }
+
   nav ul {
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    margin-top: 160px;
   }
 
   .hero h1 {
-    font-size: 32px;
+    font-size: 30px;
   }
+
 }
