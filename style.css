@@ -54,9 +54,9 @@ body {
 }
 
 .social-icons img {
-  width: 44px;       /* maior */
+  width: 50px;       /* maior */
   height: auto;      /* mantém proporção correta */
-  max-height: 44px;  /* evita distorção */
+  max-height: 50px;  /* evita distorção */
   object-fit: contain;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
