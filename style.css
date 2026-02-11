@@ -44,7 +44,7 @@ body {
 .social-icons {
   display: flex;
   align-items: center;
-  gap: 4px; /* bem próximos */
+  gap: 2px; /* bem próximos */
 }
 
 .social-icons a {
