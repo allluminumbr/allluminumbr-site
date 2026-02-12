@@ -6,17 +6,19 @@
 }
 
 body {
-  background: #000;
-  color: #fff;
+  background: #0d1117;
+  color: #e6edf3;
 }
 
 .site-header {
   position: fixed;
   width: 100%;
   top: 0;
-  background: #0a0f14;
-  padding: 10px 40px;
+  background: rgba(13, 17, 23, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 14px 40px;
   z-index: 999;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .header-container {
@@ -29,16 +31,17 @@ body {
   height: 45px;
 }
 
-.main-nav ul {
-  display: flex;
-  gap: 25px;
-  list-style: none;
-}
-
 .main-nav a {
-  color: white;
+  color: #c9d1d9;
   text-decoration: none;
   font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #3fb950;
 }
 
 .social-icons {
@@ -98,19 +101,31 @@ body {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #c9d1d9;
 }
 
 footer {
-  background: #0a0f14;
+  background: #0d1117;
   text-align: center;
-  padding: 10px;
-  font-size: 12px;
-}
-
-footer a {
-  color: #4CAF50;
-  text-decoration: none;
+  padding: 18px;
+  font-size: 13px;
+  color: #8b949e;
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
 
 .whatsapp-btn {
