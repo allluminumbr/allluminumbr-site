@@ -181,4 +181,21 @@ footer {
     font-size: 12px;
   }
 
+/* FORÇA MENU HORIZONTAL NO DESKTOP */
+@media (min-width: 769px) {
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .main-nav ul {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+
 }
