@@ -31,23 +31,26 @@ body {
   height: 45px;
 }
 
-.main-nav a {
-  color: #c9d1d9;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  transition: color 0.3s ease;
+.main-nav ul {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.main-nav a:hover {
-  color: #3fb950;
+.main-nav li {
+  display: inline-block;
 }
+
 
 .social-icons {
   display: flex;
   align-items: center;
-  gap: 2px; /* espaço mínimo real */
+  gap: -6px; /* espaço mínimo real */
 }
 
 .social-icons a {
